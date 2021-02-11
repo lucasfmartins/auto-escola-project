@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
-import {BreakpointSize, BreakAt} from "./Breakpoints";
+import {BreakpointSizes, BreakAt} from "./Breakpoints";
 
 const GlobalStyle = createGlobalStyle`   
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
       //mobile first
       font-size: 2.5rem; // 16 * 2.5 = 40px 
 
-      ${BreakAt(BreakpointSize.lg)}{
+      ${BreakAt(BreakpointSizes.lg)}{
         font-size: 3.75rem;       
       }
     }
@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     h2 {
       font-size: 2rem;
 
-      ${BreakAt(BreakpointSize.lg)}{
+      ${BreakAt(BreakpointSizes.lg)}{
         font-size: 3.125rem;
       }
     }
@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
     h3 {
       font-size: 1.9rem;
 
-      ${BreakAt(BreakpointSize.lg)}{
+      ${BreakAt(BreakpointSizes.lg)}{
         font-size: 2.5rem;
       }
     }
@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.3rem;
       font-weight: 600;
 
-      ${BreakAt(BreakpointSize.lg)}{
+      ${BreakAt(BreakpointSizes.lg)}{
         font-size: 2.125rem;
       }
     }
@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.2rem;
       font-weight: 300;
 
-      ${BreakAt(BreakpointSize.lg)}{
+      ${BreakAt(BreakpointSizes.lg)}{
         font-size: 1.5rem;
       }
     }
@@ -78,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.1rem;
       font-weight: 600;
 
-        ${BreakAt(BreakpointSize.lg)}{
+        ${BreakAt(BreakpointSizes.lg)}{
           font-size: 1.25rem;
       }
     }

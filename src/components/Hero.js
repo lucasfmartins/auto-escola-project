@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {BreakAt, BreakpointSize} from "styles/Breakpoints";
+import {BreakAt, BreakpointSizes} from "styles/Breakpoints";
 
 const colorYellow = "#ffc107";
 const Root = styled.div`
@@ -48,12 +48,12 @@ const Container = styled.div`
     max-width: 1140px;
     margin: 0 16px; //em cima e embaix sem margem, e automatico dos lados
   } */
-  ${BreakAt(BreakpointSize.sm)}{
+  ${BreakAt(BreakpointSizes.sm)}{
     padding:0 16px;
   }
 
   // cria media querry para tela ainda maior
-  ${BreakAt(BreakpointSize.lg)}{
+  ${BreakAt(BreakpointSizes.lg)}{
     max-width: 1140px;
     margin: 0 auto; //em cima e embaix sem margem, e automatico dos lados
     padding: 0;
