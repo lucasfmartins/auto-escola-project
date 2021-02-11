@@ -1,8 +1,10 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import PropTypes from 'prop-types';
 
-import {BreakAt, BreakpointSize} from "./Breakpoints";
+import {BreakAt, BreakpointSize} from "styles/Breakpoints";
 
+const colorYellow = "#ffc107";
 const Root = styled.div`
     color: #fff;
     padding: 100px 0;
@@ -11,12 +13,8 @@ const Root = styled.div`
         background-size: cover;
         background-position: center;
         background-blend-mode: overlay;
+        
     `}
-`;
-
-const Title = styled.h1`
-    font-weight: 700;
-    letter-spacing: 2px;
 `;
 
 const Content = styled.div`
@@ -33,7 +31,8 @@ const Content = styled.div`
 
     li{     
         &::before{
-        content: "\\2713\\0020";
+          content: "\\2713\\0020";
+          color: ${colorYellow};
         }
     }
 `;
@@ -63,14 +62,25 @@ const Container = styled.div`
 `;
 
 //children permite composição de componentes, 
-const Hero = ({image, title, children}) => (
+const Hero = ({image, children}) => (
     <Root image={image}>
         <Container>
-            <Title>{title}</Title>
             <Content>{children}</Content>       
         </Container>
     </Root>
 );
+
+Hero.propTypes = {
+  /**
+   *Background 
+   */
+  image: PropTypes.string,
+  children: PropTypes.node,
+}
+
+// Hero.defaultProps = {
+//   title: "Meu título",
+// }
 
 export default Hero;
 
