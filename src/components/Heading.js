@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 const Heading = styled.div`
   h1,
   h2,
