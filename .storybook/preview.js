@@ -2,12 +2,13 @@ import React from 'react';
 import { addDecorator, addParameters } from "@storybook/react";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
+import ThemeProviderComponent from "../src/styles/ThemeProvider";
 
-addDecorator(storyFn => (
-
+addDecorator((storyFn) => (
   <>
     <GlobalStyle />
-    {storyFn()}
+    <ThemeProviderComponent>{storyFn()}</ThemeProviderComponent>
+   {/* {storyFn()} */}
   </>
 ));
 
