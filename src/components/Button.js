@@ -10,11 +10,8 @@ import styled from "styled-components";
 // );
 
 const getPrimaryColor = (props) => props.theme.colors.primary.main;
-<<<<<<< HEAD
 const getPrimaryText = (props) => props.theme.colors.primary.text;
-=======
-const getPrimaryText = (props) => props.theme.colors.primary.text;
->>>>>>> feat/new
+
 
 const Button = styled.button`
   font-size:  1rem;
