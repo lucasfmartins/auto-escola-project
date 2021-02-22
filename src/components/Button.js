@@ -9,7 +9,7 @@ import styled from "styled-components";
 //   </button>
 // );
 
-const getPrimaryColor = (props) => props.theme.primary.main;
+const getPrimaryColor = (props) => props.theme.colors.primary.main;
 const getPrimaryText = (props) => props.thme.colors.primary.text;
 
 const Button = styled.button`
