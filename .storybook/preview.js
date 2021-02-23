@@ -1,21 +1,27 @@
-import React from 'react';
+import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
+import { select } from "@storybook/addon-knobs";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
-import ThemeProviderComponent from "../src/styles/ThemeProvider";
+import ThemeProviderComponent, {
+  ThemeNames,
+} from "../src/styles/ThemeProvider";
 
 addDecorator((storyFn) => (
   <>
-    <GlobalStyle />
-    <ThemeProviderComponent>{storyFn()}</ThemeProviderComponent>
-   {/* {storyFn()} */}
+    <ThemeProviderComponent
+      theme={select("Theme", ThemeNames, ThemeNames.light)}
+    >
+      <GlobalStyle />
+      {storyFn()}
+    </ThemeProviderComponent>
+    {/* {storyFn()} */}
   </>
 ));
 
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-}
+};
 
 //variavel
 //mobile first como padão, antes da primeira queda
@@ -59,11 +65,11 @@ const viewports = {
       height: "800px",
     },
   },
-}
+};
 //configura todos os addons, deixando viewport como variavel
 //para definir os dispositivos que queremos ver na listagem
 addParameters({
   viewport: {
-    viewports
-  }
-})
+    viewports,
+  },
+});

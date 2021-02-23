@@ -34,8 +34,6 @@ const getMainColor = ({ theme, color }) => {
   }
 };
 
-const getColorText = (props) => props.theme.colors.primary.text;
-
 const getDarkColor = ({ theme, color }) => {
   switch (color) {
     case ButtonColors.primary:
@@ -44,6 +42,17 @@ const getDarkColor = ({ theme, color }) => {
       return theme.colors.danger.dark;
     default:
       return "#5a6268";
+  }
+};
+
+const getColorText = ({ theme, color }) => {
+  switch (color) {
+    case ButtonColors.primary:
+      return theme.colors.primary.text;
+    case ButtonColors.danger:
+      return theme.colors.danger.text;
+    default:
+      return "#212121";
   }
 };
 

@@ -1,7 +1,13 @@
 import React from "react";
-import {ThemeProvider} from "styled-components";
+import { ThemeProvider } from "styled-components";
 
-const theme = {
+
+export const ThemeNames = {
+  light: "light",
+  ocean: "ocean"
+}
+
+const light = {
   colors: {
     primary: {
       main: "#ffc107",
@@ -12,16 +18,33 @@ const theme = {
     danger: {
       main: "#ff3d00",
       dark: "#d22a00",
-      text: "#212121"
-    }
-  }
+      text: "#212121",
+    },
+  },
 };
 
-const ThemeProviderComponent = ({children}) => (
-  <ThemeProvider theme={theme}>
-    {children}
-  </ThemeProvider>
+const allThemes = {
+  light,
+  ocean: {
+    ...light,
+    colors: {
+      ...light.colors,
+      primary: {
+        main: "#2196f4",
+        dark: "#1769aa",
+        light: "#4dabf5",
+        text: "#fff",
+      },
+    },
+  },
+};
+
+const ThemeProviderComponent = ({ theme, children }) => (
+  <ThemeProvider theme={allThemes[theme]}>{children}</ThemeProvider>
 );
 
-export default ThemeProviderComponent;
+ThemeProviderComponent.defaultProps = {
+  theme: "light",
+};
 
+export default ThemeProviderComponent;
