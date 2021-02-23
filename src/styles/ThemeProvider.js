@@ -10,7 +10,7 @@ const theme = {
       text: "#212121",
     },
     danger: {
-      main: "#ff3d000",
+      main: "#ff3d00",
       dark: "#d22a00",
       text: "#212121"
     }
