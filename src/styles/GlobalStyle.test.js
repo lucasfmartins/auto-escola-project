@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from "../components/test-utils";
+import { render } from "../test-utils";
 
 
 import GlobalStyle from "./GlobalStyle";

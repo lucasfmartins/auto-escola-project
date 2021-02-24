@@ -1,14 +1,13 @@
 module.exports = {
-  "stories": [
-
-    "../src/stories/*.stories.mdx",
-    "../src/stories/*.stories.@(js|jsx|ts|tsx)",
-    "../src/components/*.stories.mdx",
-    "../src/components/*.stories.@(js|jsx|ts|tsx)",
-    "../src/styles/*.stories.mdx",
-    "../src/styles/*.stories.@(js|jsx|ts|tsx)",
+  stories: [
+    "../src/stories/**/*.stories.mdx",
+    "../src/stories/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/components/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/components/**/*.stories.mdx",
+    "../src/styles/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/styles/**/*.stories.mdx",
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-viewport",
     "@storybook/addon-links",
     {
@@ -17,14 +16,12 @@ module.exports = {
         configureJSX: true,
       },
     },
-    
+
     "@storybook/addon-essentials",
     "@storybook/addon-knobs",
     "@storybook/preset-create-react-app",
-   
-  ]
-}
-
+  ],
+};
 
 //SEGUE A HIERARQUIA DE PASTAS
 // "../src/**/*.stories.mdx",
