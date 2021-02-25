@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import { BreakAt, BreakpointSizes } from "styles/Breakpoints";
+
 
 const getPrimaryColor = ({theme}) => theme.colors.primary.main;
 //snipet styc
@@ -10,6 +12,13 @@ const Root = styled.div`
 
   & h5 {
     margin: 16px 0;
+    /* 1.2rem(font-size) * 1.3(line-Height) * 2 (linhas) */
+    min-height: 3.12rem; 
+    
+    ${BreakAt(BreakpointSizes.lg)}{
+      /* 1.5rem(font-size) * 1.3(line-Height) * 2 (linhas) */
+      min-height: 3.9rem;
+    }
   }
   & p {
     margin: 0;
