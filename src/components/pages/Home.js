@@ -8,6 +8,8 @@ import Button from "components/atoms/Button";
 import Feature from "components/atoms/Feature";
 import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
+import AboutVideo from "assets/about.mp4";
+import Footer from "components/organisms/Footer";
 
 import HeroImage from "assets/hero.jpg";
 
@@ -46,6 +48,37 @@ const Home = () => (
         </Feature>
       </Grid>
     </Section>
+    <Section inverse>
+      <Heading>
+        <h2>Conheça nossos serviços</h2>
+      </Heading>
+    </Section>
+    <Section>
+      <Grid md={2}>
+        <div>
+          <Heading>
+            <h2>Auto Escola Project</h2>
+          </Heading>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore,
+            consequatur quia! Quod, ipsam. Ipsa officiis dignissimos ea
+            laudantium! Odio recusandae minima eos beatae fuga dignissimos?
+          </p>
+          <div>
+            <Button color="primary">Saiba Mais</Button>
+          </div>
+        </div>
+        <div>
+          <video src={AboutVideo} width="100%" autoPlay loop />
+        </div>
+      </Grid>
+    </Section>
+    <Section inverse>
+      <Heading>
+        <h2>Dúvidas recorrentes</h2>
+      </Heading>
+    </Section>
+    <Footer />
   </>
 );
 
