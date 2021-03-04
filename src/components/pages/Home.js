@@ -2,15 +2,19 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 
-import Hero from "components/molecules/Hero";
+//Atoms
 import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
 import Feature from "components/atoms/Feature";
-import Section from "components/molecules/Section";
 import Grid from "components/atoms/Grid";
+import Accordion, {AccordionGroup} from "components/atoms/Accordion";
+//Molecules
+import Section from "components/molecules/Section";
+import Hero from "components/molecules/Hero";
+//Organisms
 import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
-
+//img
 import HeroImage from "assets/hero.jpg";
 import ServImg01 from "assets/serv-01.jpg";
 import ServImg02 from "assets/serv-02.jpg";
@@ -117,6 +121,26 @@ const Home = () => (
       <Heading>
         <h2>Dúvidas recorrentes</h2>
       </Heading>
+      <AccordionGroup>
+        <Accordion title="Como eu renovo minha CNH?">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores
+          quas necessitatibus accusamus maxime, molestiae, vel aut explicabo
+          harum tempora quaerat sed in natus nostrum? Voluptates fuga sit cum
+          facilis.
+        </Accordion>
+        <Accordion title="Como faço a mudança de categoria?">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores
+          quas necessitatibus accusamus maxime, molestiae, vel aut explicabo
+          harum tempora quaerat sed in natus nostrum? Voluptates fuga sit cum
+          facilis.
+        </Accordion>
+        <Accordion title="Fui multado, e agora?">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores
+          quas necessitatibus accusamus maxime, molestiae, vel aut explicabo
+          harum tempora quaerat sed in natus nostrum? Voluptates fuga sit cum
+          facilis.
+        </Accordion>
+      </AccordionGroup>
     </Section>
     <Footer />
   </>
