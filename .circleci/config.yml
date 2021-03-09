@@ -10,10 +10,10 @@ jobs:
     steps:
       - checkout
       - node/install:
-        install-yarn: true
+          install-yarn: true
       - run: node --version
       - run: yarn --version
 
-workflow:
+workflows:
   ci:
     - setup
