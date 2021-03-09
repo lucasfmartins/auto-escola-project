@@ -22,8 +22,7 @@ const Container = styled.div`
   // cria media querry para tela ainda maior
   ${BreakAt(BreakpointSizes.lg)}{
     max-width: 1140px;
-    margin: 0 auto; //em cima e embaix sem margem, e automatico dos lados
-    padding: 0;
+    margin: 0; //em cima e embaix sem margem, e automatico dos lados
   }
   
 `;

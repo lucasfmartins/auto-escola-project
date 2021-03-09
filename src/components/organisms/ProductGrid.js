@@ -22,20 +22,22 @@ const ProductGrid = ({ products }) => {
       <Grid md={3}>
         {filteredProducts.map((product) => (
           //quando trabalhamos com array no react, o primeiro elemento tem a prop key, diferente para todos os index
-          <Card key={product.id}>
-            <CardMedia image={product.image} />
-            <CardBody>
-              <Heading>
-                <h6>{product.title}</h6>
-              </Heading>
-              <p>{product.summary}</p>
-              <div>
-                <Button color="primary" variant="link">
-                  Saiba mais
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
+          <div key={product.id}>
+            <Card >
+              <CardMedia image={product.image} />
+              <CardBody>
+                <Heading>
+                  <h6>{product.title}</h6>
+                </Heading>
+                <p>{product.summary}</p>
+                <div>
+                  <Button color="primary" variant="link">
+                    Saiba mais
+                  </Button>
+                </div>
+              </CardBody>
+            </Card>
+          </div>
         ))}
       </Grid>
       {!showAll && (
