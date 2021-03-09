@@ -1,2 +1,1 @@
-codecov:
-  token: 605979f7-4688-4526-968c-6fb3c5292b87
+cat codecov.yml | curl --data-binary @- https://codecov.io/validate
