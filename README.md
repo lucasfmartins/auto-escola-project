@@ -1,6 +1,7 @@
 # Auto escola project
 
 ![CircleCI](https://img.shields.io/circleci/build/github/lucasfmartins/auto-escola-project)
+![Codecov](https://img.shields.io/codecov/c/github/lucasfmartins/auto-escola-project)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
