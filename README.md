@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Com foco no estudo do ambiente Storybook e Jest para teste unitario
+Com foco no estudo do ambiente Storybook e Jest para teste unitario, além de aprofundamento em conceitos de CI/CD
 
 # Resultado final:
 - [Demonstração online da aplicação](https://auto-escola-project.vercel.app/)
