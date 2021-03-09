@@ -16,6 +16,7 @@ const Content = styled.div`
     ${BreakAt(BreakpointSizes.md)}{
       padding: 80px 0;
     }
+
   h2 {
     margin-top: 0;
   }
