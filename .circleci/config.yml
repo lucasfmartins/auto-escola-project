@@ -19,8 +19,21 @@ jobs:
       - run: yarn cover
       - codecov/upload:
           file: coverage/*.json
-
+  versioning:
+    docker:
+      - image: circleci/node:12.18.3-browsers
+    steps:
+      - checkout
+      - run:
+          name: Check package version
+          command: node scripts/check-version lucasfmartins auto-escola-project
 workflows:
   ci:
     jobs:
       - tests
+      - versioning:
+          filters:
+            branches:
+              ignore: main
+            tags:
+              ignore: /.*/
