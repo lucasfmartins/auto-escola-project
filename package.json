@@ -12,6 +12,7 @@
     "@storybook/node-logger": "^6.1.21",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.1.21",
+    "@svgr/cli": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.7.1",
@@ -34,7 +35,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "chromatic --exit-zero-on-changes",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "svg": "svgr --icon --replace-attr-values \"#ffc107=currentColor\" -d src/draws/"
   },
   "eslintConfig": {
     "extends": [
