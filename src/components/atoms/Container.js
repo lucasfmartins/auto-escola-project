@@ -1,8 +1,7 @@
-
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import {BreakAt, BreakpointSizes} from "styles/Breakpoints";
+import { BreakAt, BreakpointSizes } from "styles/Breakpoints";
 
 const Container = styled.div`
   /* background-color: red; */
@@ -15,22 +14,16 @@ const Container = styled.div`
     max-width: 1140px;
     margin: 0 16px; //em cima e embaix sem margem, e automatico dos lados
   } */
-  ${BreakAt(BreakpointSizes.sm)}{
-    padding:0 16px;
+  ${BreakAt(BreakpointSizes.sm)} {
+    padding: 0 16px;
   }
 
   // cria media querry para tela ainda maior
-  ${BreakAt(BreakpointSizes.lg)}{
+  ${BreakAt(BreakpointSizes.lg)} {
     max-width: 1140px;
-    margin: 0; //em cima e embaix sem margem, e automatico dos lados
+    margin: 0 auto; //em cima e embaix sem margem, e automatico dos lados
   }
 
-    // cria media querry para tela ainda maior
-    ${BreakAt(BreakpointSizes.xl)}{
-    max-width: 100%;
-    margin: 0; //em cima e embaix sem margem, e automatico dos lados
-  }
-  
 `;
 
 Container.defaultProps = {
