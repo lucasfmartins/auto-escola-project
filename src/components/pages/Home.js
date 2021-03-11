@@ -1,13 +1,13 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 //Atoms
 import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
 import Feature from "components/atoms/Feature";
 import Grid from "components/atoms/Grid";
-import Accordion, {AccordionGroup} from "components/atoms/Accordion";
+import Accordion, { AccordionGroup } from "components/atoms/Accordion";
 //Molecules
 import Section from "components/molecules/Section";
 import Hero from "components/molecules/Hero";
@@ -109,7 +109,7 @@ const Home = () => (
             laudantium! Odio recusandae minima eos beatae fuga dignissimos?
           </p>
           <div>
-            <Button color="primary">Saiba Mais</Button>
+            <Button as={Link} to="/sobre" color="primary" >Saiba Mais</Button>
           </div>
         </div>
         <div>
