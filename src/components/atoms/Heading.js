@@ -29,7 +29,6 @@ const Heading = styled.div`
     padding-bottom: 25px;
   }
 
-
 `;
 
 export default Heading;
