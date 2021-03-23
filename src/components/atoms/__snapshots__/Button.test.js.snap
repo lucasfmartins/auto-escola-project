@@ -11,6 +11,9 @@ exports[`render with color primary and variant link 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -18,7 +21,7 @@ exports[`render with color primary and variant link 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -31,7 +34,7 @@ exports[`render with color primary and variant link 1`] = `
   padding-right: 0;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   border-color: transparent;
   color: #c79100;
@@ -56,6 +59,9 @@ exports[`render with color primary and variant outlined 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -63,7 +69,7 @@ exports[`render with color primary and variant outlined 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -73,7 +79,7 @@ exports[`render with color primary and variant outlined 1`] = `
   color: #ffc107;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   color: #c79100;
 }
@@ -97,6 +103,9 @@ exports[`renders dinamic object with color danger 1`] = `
   background-color: #ff3d00;
   border: 2px solid #ff3d00;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -104,7 +113,7 @@ exports[`renders dinamic object with color danger 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #d22a00;
   border-color: #d22a00;
 }
@@ -128,6 +137,9 @@ exports[`renders dinamic object with color default 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -135,7 +147,7 @@ exports[`renders dinamic object with color default 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -159,6 +171,9 @@ exports[`renders dinamic object with color primary 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -166,7 +181,7 @@ exports[`renders dinamic object with color primary 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -190,6 +205,9 @@ exports[`renders dinamic object with variant default 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -197,7 +215,7 @@ exports[`renders dinamic object with variant default 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -221,6 +239,9 @@ exports[`renders dinamic object with variant link 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -228,7 +249,7 @@ exports[`renders dinamic object with variant link 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -241,7 +262,7 @@ exports[`renders dinamic object with variant link 1`] = `
   padding-right: 0;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   border-color: transparent;
   color: #5a6268;
@@ -266,6 +287,9 @@ exports[`renders dinamic object with variant outlined 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -273,7 +297,7 @@ exports[`renders dinamic object with variant outlined 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -283,7 +307,7 @@ exports[`renders dinamic object with variant outlined 1`] = `
   color: #212121;
 }
 
-.c1:hover:enabled {
+.c1:hover:not(:disabled) {
   background-color: transparent;
   color: #5a6268;
 }
@@ -307,6 +331,9 @@ exports[`renders with color danger 1`] = `
   background-color: #ff3d00;
   border: 2px solid #ff3d00;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -314,7 +341,7 @@ exports[`renders with color danger 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #d22a00;
   border-color: #d22a00;
 }
@@ -338,6 +365,9 @@ exports[`renders with color danger 2`] = `
   background-color: #ff3d00;
   border: 2px solid #ff3d00;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -345,7 +375,7 @@ exports[`renders with color danger 2`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #d22a00;
   border-color: #d22a00;
 }
@@ -369,6 +399,9 @@ exports[`renders with color default 1`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -376,7 +409,7 @@ exports[`renders with color default 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -400,6 +433,9 @@ exports[`renders with color default 2`] = `
   background-color: #e0e0e0;
   border: 2px solid #e0e0e0;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -407,7 +443,7 @@ exports[`renders with color default 2`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #5a6268;
   border-color: #5a6268;
 }
@@ -431,6 +467,9 @@ exports[`renders with color primary 1`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -438,7 +477,7 @@ exports[`renders with color primary 1`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }
@@ -462,6 +501,9 @@ exports[`renders with color primary 2`] = `
   background-color: #ffc107;
   border: 2px solid #ffc107;
   color: #212121;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:disabled {
@@ -469,7 +511,7 @@ exports[`renders with color primary 2`] = `
   cursor: not-allowed;
 }
 
-.c0:hover:enabled {
+.c0:hover:not(:disabled) {
   background-color: #c79100;
   border-color: #c79100;
 }

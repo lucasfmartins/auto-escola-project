@@ -1,6 +1,7 @@
 import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
+import { MemoryRouter as Router } from "react-router-dom";
 
 import GlobalStyle from "../src/styles/GlobalStyle";
 import ThemeProviderComponent, {
@@ -8,7 +9,7 @@ import ThemeProviderComponent, {
 } from "../src/styles/ThemeProvider";
 
 addDecorator((storyFn) => (
-  <>
+  <Router>
     <ThemeProviderComponent
       theme={select("Theme", ThemeNames, ThemeNames.light)}
     >
@@ -16,7 +17,7 @@ addDecorator((storyFn) => (
       {storyFn()}
     </ThemeProviderComponent>
     {/* {storyFn()} */}
-  </>
+  </Router>
 ));
 
 export const parameters = {

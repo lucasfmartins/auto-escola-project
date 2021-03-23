@@ -1,4 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { BreakAt, BreakpointSizes } from "styles/Breakpoints";
+
 const Heading = styled.div`
   h1,
   h2,
@@ -9,14 +12,14 @@ const Heading = styled.div`
     position: relative;
     margin-bottom: 25px;
     padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     &::after {
       content: "";
       position: absolute; //abosoluto ao primeiro parente relativo
       left: 0;
       bottom: -3px;
-      background-color: ${props => props.theme.colors.primary.main};
+      background-color: ${(props) => props.theme.colors.primary.main};
       height: 5px;
       width: 70px;
     }

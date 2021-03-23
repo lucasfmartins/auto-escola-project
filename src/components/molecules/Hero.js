@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
 import Container from "components/atoms/Container";
+import { BreakAt, BreakpointSizes } from "styles/Breakpoints";
 
 const colorYellow = "#ffc107";
 const Root = styled.div`
@@ -36,6 +37,10 @@ const Content = styled.div`
       content: "\\2713\\0020";
       color: ${(props) => props.theme.colors.primary.main};
     }
+  }
+
+  ${BreakAt(BreakpointSizes.xl)}{
+    margin-left: 60px; 
   }
 `;
 

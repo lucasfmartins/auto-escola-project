@@ -2,9 +2,12 @@ import React from "react";
 
 import ThemeProviderComponent from "styles/ThemeProvider";
 import { render } from "@testing-library/react";
+import { MemoryRouter as Router } from "react-router-dom";
 
 const TestProvider = ({ children }) => (
-  <ThemeProviderComponent>{children}</ThemeProviderComponent>
+  <Router>
+    <ThemeProviderComponent>{children}</ThemeProviderComponent>
+  </Router>
 );
 
 export * from "@testing-library/react";
