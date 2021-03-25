@@ -1,4 +1,4 @@
-import React from "react";
+
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ const Item = styled.span`
   color: #fff;
 
   ${(props) =>
-    props.isClickable &&
+    props.to &&
     css`
       cursor: pointer;
 
@@ -43,7 +43,7 @@ const BreadCrump = ({ items }) => (
         key={item.label}
         as={item.link && Link}
         to={item.link}
-        isClickable={!!item.link}
+
       >
         {item.label}
       </Item>
