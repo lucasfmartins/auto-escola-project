@@ -1,7 +1,9 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { FaCar, FaKey, FaMapMarkedAlt, FaAccessibleIcon } from "react-icons/fa";
 import { Link } from "react-router-dom";
+//type
+import ProductType from "models/types/ProductType";
 //Atoms
 import Heading from "components/atoms/Heading";
 import Button from "components/atoms/Button";
@@ -16,47 +18,11 @@ import Footer from "components/organisms/Footer";
 import ProductGrid from "components/organisms/ProductGrid";
 //img
 import HeroImage from "assets/hero.jpg";
-import ServImg01 from "assets/serv-01.jpg";
-import ServImg02 from "assets/serv-02.jpg";
-import ServImg03 from "assets/serv-03.jpg";
-import ServImg04 from "assets/serv-04.jpg";
-import ServImg05 from "assets/serv-05.jpg";
+
 import AboutVideo from "assets/about.mp4";
 
-const products = [
-  {
-    id: 1,
-    title: "1º Habilitação de Carro e Moto",
-    summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-    image: ServImg01,
-  },
-  {
-    id: 2,
-    title: "1º Habilitação de Carro",
-    summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-    image: ServImg02,
-  },
-  {
-    id: 3,
-    title: "1º Habilitação de Moto",
-    summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-    image: ServImg03,
-  },
-  {
-    id: 4,
-    title: "Mudança de Categoria Caminhão",
-    summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-    image: ServImg04,
-  },
-  {
-    id: 5,
-    title: "Aulas avulsas",
-    summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-    image: ServImg05,
-  },
-];
 
-const Home = () => (
+const Home = ({products}) => (
   <>
     <Hero image={HeroImage}>
       <Heading>
@@ -146,8 +112,12 @@ const Home = () => (
   </>
 );
 
-// Home.defaultProps = {};
+Home.defaultProps = {
+  products: [],
+};
 
-// Home.propTypes = {};
+Home.propTypes = {
+  products: PropTypes.arrayOf(ProductType)
+};
 
 export default Home;

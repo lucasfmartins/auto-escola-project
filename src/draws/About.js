@@ -1,5 +1,7 @@
 import * as React from "react";
 
+//yarn svg svg/error.svg
+
 function SvgAbout(props) {
   return (
     <svg

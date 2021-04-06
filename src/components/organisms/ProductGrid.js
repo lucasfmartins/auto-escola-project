@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import ProductType from "models/types/ProductType";
+
 import Grid from "components/atoms/Grid";
 import Card, { CardMedia, CardBody } from "components/atoms/Card";
 import Heading from "components/atoms/Heading";
@@ -36,7 +38,7 @@ const ProductGrid = ({ products }) => {
                     color="primary"
                     variant="link"
                     as={Link}
-                    to="/servicos"
+                    to={`/servicos/${product.slang}`}
                   >
                     Saiba mais
                   </Button>
@@ -67,13 +69,8 @@ ProductGrid.defaultProps = {
 };
 
 ProductGrid.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      image: PropTypes.string,
-      title: PropTypes.string,
-      summary: PropTypes.string,
-    })
+  product: PropTypes.arrayOf(
+    ProductType,
   ),
 };
 

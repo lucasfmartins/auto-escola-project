@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaIdCard, FaHome, FaScroll } from "react-icons/fa";
 
-import { useScrollToTop } from "hooks/scroll";
+import ProductType from "models/types/ProductType";
 
 import Hero from "components/molecules/Hero";
 import Heading from "components/atoms/Heading";
@@ -38,87 +37,89 @@ const PinnedItem = styled.li`
   }
 `;
 
-const ProductDetail = () => {
-  useScrollToTop();
-  return (
-    <>
-      <Hero image={HeroImage}>
-        <Heading>
-          <h1>Nome do Serviço</h1>
-        </Heading>
-        <BreadCrump
-          items={[
-            { label: "Início", link: "/" },
-            { label: "Serviços" },
-            { label: "Nome do Serviço" },
-          ]}
-        />
-      </Hero>
-      <Section>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum,
-          nobis. Iusto culpa quia ea ad aliquid voluptate labore, doloribus
-          architecto facere expedita ipsum est nemo quam voluptates aut commodi
-          impedit.
-        </p>
-        <p>
-          Nulla consequuntur reprehenderit quaerat dolorum optio doloribus, iste
-          omnis quibusdam accusantium repellendus saepe recusandae in
-          consequatur deserunt tenetur unde aspernatur nesciunt voluptatum
-          nostrum commodi architecto eius nemo facilis. Nam, voluptatibus.
-        </p>
-        <p>
-          Mollitia aliquid odio assumenda quae molestias numquam repellat
-          nostrum quo voluptatem, natus delectus. Recusandae eius consectetur,
-          numquam dolor illo repellat voluptatem, officia voluptatum laboriosam,
-          modi optio earum animi accusantium corrupti?
-        </p>
-        <h5>Documentos necessários:</h5>
-        <PinnedList>
-          <PinnedItem>
-            <FaIdCard />
-            RG
-          </PinnedItem>
-          <PinnedItem>
-            <FaIdCard />
-            CPF
-          </PinnedItem>
-          <PinnedItem>
-            <FaScroll />
-            Certidão de nascimento ou casamento
-          </PinnedItem>
-          <PinnedItem>
-            <FaHome />
-            Comprovante de residência
-          </PinnedItem>
-        </PinnedList>
-      </Section>
-      <Section inverse>
-        <Callout>
-          <CalloutBody>
-            <h6>Faça sua matrícula agora mesmo</h6>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              quasi, pariatur doloribus, ratione laboriosam architecto omnis
-              ipsum mollitia non voluptatum soluta voluptatem beatae illum,
-              quibusdam cupiditate itaque. Nam, fugit adipisci!
-            </p>
-            <CalloutActions>
-              <Button color="primary">Matricular</Button>
-            </CalloutActions>
-          </CalloutBody>
-          <CalloutMedia>
-            <SpeedImage />
-          </CalloutMedia>
-        </Callout>
-      </Section>
-      <Footer />
-    </>
-  );
-};
-ProductDetail.defaultProps = {};
+const ProductDetail = ({ product }) => (
+  <>
+    <Hero image={HeroImage}>
+      <Heading>
+        <h1>{product.title}</h1>
+      </Heading>
+      <BreadCrump
+        items={[
+          { label: "Início", link: "/" },
+          { label: "Serviços" },
+          { label: product.title },
+        ]}
+      />
+    </Hero>
+    <Section>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, nobis.
+        Iusto culpa quia ea ad aliquid voluptate labore, doloribus architecto
+        facere expedita ipsum est nemo quam voluptates aut commodi impedit.
+      </p>
+      <p>
+        Nulla consequuntur reprehenderit quaerat dolorum optio doloribus, iste
+        omnis quibusdam accusantium repellendus saepe recusandae in consequatur
+        deserunt tenetur unde aspernatur nesciunt voluptatum nostrum commodi
+        architecto eius nemo facilis. Nam, voluptatibus.
+      </p>
+      <p>
+        Mollitia aliquid odio assumenda quae molestias numquam repellat nostrum
+        quo voluptatem, natus delectus. Recusandae eius consectetur, numquam
+        dolor illo repellat voluptatem, officia voluptatum laboriosam, modi
+        optio earum animi accusantium corrupti?
+      </p>
+      <h5>Documentos necessários:</h5>
+      <PinnedList>
+        <PinnedItem>
+          <FaIdCard />
+          RG
+        </PinnedItem>
+        <PinnedItem>
+          <FaIdCard />
+          CPF
+        </PinnedItem>
+        <PinnedItem>
+          <FaScroll />
+          Certidão de nascimento ou casamento
+        </PinnedItem>
+        <PinnedItem>
+          <FaHome />
+          Comprovante de residência
+        </PinnedItem>
+      </PinnedList>
+    </Section>
+    <Section inverse>
+      <Callout>
+        <CalloutBody>
+          <h6>Faça sua matrícula agora mesmo</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            quasi, pariatur doloribus, ratione laboriosam architecto omnis ipsum
+            mollitia non voluptatum soluta voluptatem beatae illum, quibusdam
+            cupiditate itaque. Nam, fugit adipisci!
+          </p>
+          <CalloutActions>
+            <Button color="primary">Matricular</Button>
+          </CalloutActions>
+        </CalloutBody>
+        <CalloutMedia>
+          <SpeedImage />
+        </CalloutMedia>
+      </Callout>
+    </Section>
+    <Footer />
+  </>
+);
 
-ProductDetail.propTypes = {};
+ProductDetail.defaultProps = {
+  product: {},
+};
+
+ProductDetail.propTypes = {
+  product: ProductType,
+
+};
 
 export default ProductDetail;
 
