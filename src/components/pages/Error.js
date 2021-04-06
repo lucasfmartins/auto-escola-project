@@ -36,7 +36,6 @@ const Error = ({ image, title, description }) => (
           <ErrorTitle>{title}</ErrorTitle>
         </Heading>
         <ErrorMessage>{description}</ErrorMessage>
-        <p>{description}</p>
         <div>
           <Button as={Link} to="/" color="primary">Ir para a pagina inicial</Button>
         </div>
